@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>Editar Cliente</title>
+</head>
+
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\listadousuarios.html">Listar usuarios</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\crearusuario.html">Crear usuario</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarcliente.html">Editar cliente</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editaradministrativo.html">Editar
+                administrativo</a>|
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarprofesional.html">Editar profesional</a>
+        </nav>
+    </header>
+
+    <form name="frmcrear" id="frmcrearid" action="#" method="POST">
+
+        <table class="col- col-s-4 ">
+            <tr>
+                <td> RUN </td>
+                <td> <input type="text" name="run" id="run"> </td>
+            </tr>
+
+            <tr>
+                <td> Nombres </td>
+                <td> <input type="text" name="nombres" id="nombres"></td>
+            </tr>
+
+            <tr>
+                <td> Apellidos </td>
+                <td> <input type="text" name="apellidos" id="apellidos"> </td>
+            </tr>
+
+            <tr>
+                <td> Telefono </td>
+                <td> <input type="text" name="telefono" id="telefono"> </td>
+            </tr>
+
+            <tr>
+                <td> AFP </td>
+                <td> <label for="Tipo_afp">Seleccione una afp:</label>
+
+                    <select name="afps" id="afps">
+                        <option value="modelo">Modelo</option>
+                        <option value="provida">Provida</option>
+                        <option value="habitat">Habitat</option>
+                        <option value="capital">Capital</option>
+                        <option value="pal vital">Plan vital</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Sistema salud </td>
+                <td> <label for="Tipo_Salud">Seleccione un sistema de salud:</label>
+
+                    <select name="salud" id="salud">
+                        <option value="1">Fonasa</option>
+                        <option value="2">Isapre</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Direccion </td>
+                <td> <input type="text" name="direccion" id="direccion"> </td>
+            </tr>
+
+            <tr>
+                <td> Comuna </td>
+                <td> <input type="text" name="comuna" id="comuna"> </td>
+            </tr>
+
+            <tr>
+                <td> Edad </td>
+                <td> <input type="text" name="edad" id="edad"> </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2"><button type="submit" name="btnvalidar" id="btnvalidar" class="centrado"><img
+                            src="C:\Users\Catherine\Documents\JAVA FullStack\ModuloIII\DIA7\Grupal_9\IMG\editar.png"
+                            alt="x" /></button></td>
+
+            </tr>
+
+
+        </table>
+    </form>
+
+    <footer class="col-6 col-s-5">
+        <h4>CREADO POR EL GRUPO 4</h4>
+    </footer>
+
+    <script src="validaciones.js"></script>
+
+</body>
+
+</html>

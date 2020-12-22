@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script type="text/javascript" src="listadoasesorias.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Listado Asesorias</title>
+    
+</head>
+<body>
+    <table id="tabla"> 
+        <tr>
+            <th>ID Asesoria</th>
+            <th>Nombre Cliente</th>
+            <th>Fecha Asesoria</th>
+            <th>Nombre Profesional</th>
+            <th>Actividades de Mejora</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Francisca Perez</td>
+            <td>12/12/2020</td>
+            <td>Roberto Soto</td>
+            <td><input type="image" src="IMG/desplegar.png" id="desplegar1"></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Fabian Silva</td>
+            <td>25/11/2020</td>
+            <td>Alejandra Castro</td>
+            <td><input type="image" src="IMG/desplegar.png" id="desplegar2"></td>
+        </tr>
+    </table>
+    
+    <input type="button" value="Modificar 1" id="btn1">
+    <input type="button" value="Modificar 2" id="btn2">
+    <input type="button" value="Modificar 3" id="btn3">
+
+    <div id="lista1">
+        <ul >
+            <p>Actividades de Mejora</p>
+            <li>Mejorar señalización</li>
+            <li>Arreglar piso</li>
+            <li>Arreglar puertas</li>
+            <li>Mejorar servicios higienicos</li>
+        </ul>
+    </div>
+
+    <div id="lista2">
+        <ul>
+            <li>Arreglar ventanas</li>
+            <li>Corregir señalización</li>
+            <li>Corregir instalaciones electricas</li>
+        </ul>
+    </div>
+
+    
+</body>
+<script src="listadoasesorias.js"></script>
+
+</html>

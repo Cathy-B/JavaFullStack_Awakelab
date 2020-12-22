@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Visita</title>
+</head>
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+          <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\listadousuarios.html">Listar usuarios</a> |
+          <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\crearusuario.html">Crear usuario</a> |
+          <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarcliente.html">Editar cliente</a> |
+          <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editaradministrativo.html">Editar administrativo</a>|
+          <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarprofesional.html">Editar profesional</a>
+          </nav>
+      </header>
+     
+       <section >
+      
+          <table >
+  
+              <tr>
+            
+                <td class="resal">ID Visita</td>
+            
+                <td class="resal">Fecha</td>
+            
+                <td class="resal">Hora</td>
+  
+                <td class="resal">Rut Cliente</td>
+                
+                <td class="resal">Nombre Cliente</td>
+  
+                <td class="resal">Acceder</td>
+              </tr>
+            
+              <tr>
+                <td>1</td>
+                <td>10/12/2020</td>
+            
+                <td>12:00</td>
+            
+                <td>18.831.714-6</td>
+  
+                <td>Domingo Flores</td>
+  
+                <td><a  class="icono" onclick="confirmar();"><img src="C:\Users\Catherine\Documents\JAVA FullStack\ModuloIII\DIA4\ejercicio grupal_4\IMG\acceder.png" alt="x" /></a></td>
+            
+              </tr>
+  
+            </table>
+       </section>
+  
+       <script>
+        
+        function confirmar(){
+            //Ingresamos un mensaje a mostrar
+            var mensaje = confirm("¿Desea validar y modificar los chequeos de esta visita?");
+            //Detectamos si el usuario acepto el mensaje
+            if (mensaje) {
+                location.href="responderchecklist.html";
+            }
+            //Detectamos si el usuario denegó el mensaje
+            else {
+                alert("¡Haz cancelado la operación!");
+            }
+        }
+    </script>
+
+       <footer class="col-6 col-s-5" id="footer">
+           <h4>CREADO POR EL GRUPO 4</h4>
+       </footer>
+</body>
+</html>
