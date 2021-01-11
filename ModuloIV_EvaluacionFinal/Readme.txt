@@ -42,7 +42,7 @@ https://github.com/Cathy-B/JavaFullStack_Awakelab/tree/main/ModuloIV_EvaluacionF
 
 
 3-	Ricardo Olguin Lobos:
-
+https://github.com/LokoQlia/Proyecto-modulo-4/tree/main/ModuloIV_EvaluacionFinal
 
 4-	Marcelo Gonzales Mercado:
 
