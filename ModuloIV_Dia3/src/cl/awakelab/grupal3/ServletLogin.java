@@ -6,19 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ServletContacto
+ * Servlet implementation class ServletLogin
  */
-@WebServlet("/ServletContacto")
-public class ServletContacto extends HttpServlet {
+@WebServlet("/ServletLogin")
+public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletContacto() {
+    public ServletLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,16 +27,7 @@ public class ServletContacto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		if (session == null) {
-		       // Not created yet. Now do so yourself.
-			getServletContext().getRequestDispatcher("/JSP/Login.jsp").forward(request, response);
-		} else {
-		       // Already created.
-			getServletContext().getRequestDispatcher("/JSP/Contacto.jsp").forward(request, response);
-		}
-
-		
+		getServletContext().getRequestDispatcher("/JSP/Login.jsp").forward(request, response);
 	}
 
 	/**

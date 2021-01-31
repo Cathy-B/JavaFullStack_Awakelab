@@ -7,18 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 /**
- * Servlet implementation class ServletContacto
+ * Servlet implementation class Ingreso
  */
-@WebServlet("/ServletContacto")
-public class ServletContacto extends HttpServlet {
+@WebServlet("/Ingreso")
+public class Ingreso extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletContacto() {
+    public Ingreso() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,16 +29,7 @@ public class ServletContacto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		if (session == null) {
-		       // Not created yet. Now do so yourself.
-			getServletContext().getRequestDispatcher("/JSP/Login.jsp").forward(request, response);
-		} else {
-		       // Already created.
-			getServletContext().getRequestDispatcher("/JSP/Contacto.jsp").forward(request, response);
-		}
-
-		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -45,7 +37,24 @@ public class ServletContacto extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		String usuario = "admin";
+		String contrasena= "1234";
+		
+		String vausuario = request.getParameter("rut");
+		String vacontrasena = request.getParameter("contraseña");
+		
+		if(usuario.equals(vausuario) && contrasena.equals(vacontrasena)) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("usuario", "Usuario");
+			request.getRequestDispatcher("ServletContacto").forward(request, response); 
+			 
+		}else {
+			 request.getRequestDispatcher("ServletLogin").forward(request, response); 
+			 JOptionPane.showMessageDialog(null, "Los datos ingresados son incorrectos!");
+
+		}
 	}
 
 }

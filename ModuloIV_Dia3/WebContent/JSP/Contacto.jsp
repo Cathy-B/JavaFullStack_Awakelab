@@ -16,6 +16,7 @@
             <a href="/python/">Editar profesional</a>
            
           </nav>
+          
         <h2>Menu de navegación</h2>
         <ol type="A"> 
             <li> <a href="C:\Users\Admini\Documents\daniela\05 - estudios\JAVA\MODULO 3\CLASE 2\Proyecto grupal 2\index.html" target="_blank">Pagina de inicio</a></li>
