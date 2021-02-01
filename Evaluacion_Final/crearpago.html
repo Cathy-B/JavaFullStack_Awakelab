@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear pago </title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\listadousuarios.html">Listar usuarios</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\crearusuario.html">Crear usuario</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarcliente.html">Editar cliente</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editaradministrativo.html">Editar
+                administrativo</a>|
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarprofesional.html">Editar profesional</a>
+        </nav>
+    </header>
+
+
+    <form action="#" id="f1">
+        <table>
+
+            <tr>
+               <td>Monto A pagar</td>
+               <td><input type="text"  onclick="comprueba(this)"
+                onfocus="comprueba(this)"
+                onblur="comprueba(this)"
+                onchange="comprueba(this)" id="monto"></td>
+            </tr>
+
+            <tr>
+               <td>Mes</td>
+               <td><label for="mes">Elija un mes:</label>
+
+                <select id="cars">
+                  <option value="1">Enero</option>
+                  <option value="2">Febrero</option>
+                  <option value="3">Marzo</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Mayo</option>
+                  <option value="6">Junio</option>
+                  <option value="7">Julio</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Septiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select></td>
+            </tr>
+
+            <tr>
+               <td>Año</td>
+               <td><select id="ano">
+                </select></td>
+            </tr>
+               
+            <tr>
+               <td>RUT del cliente</td>
+               <td><input type="text" onclick="comprueba(this)"
+                onfocus="comprueba(this)"
+                onblur="comprueba(this)"
+                onchange="comprueba(this)" id="rut"></td>
+            </tr>
+
+            <tr>
+               <td>Fecha actual</td>
+               <td><input type="text" readonly="readonly" id="fechaactual"></td>
+            </tr>
+
+            <tr>
+                
+                <td colspan="2" ><input type="button" value="Enviar" onclick="validar();"></td>
+             </tr>
+
+               
+        </table>
+    </form>
+    <footer class="col-6 col-s-5" id="footer">
+        <h4>CREADO POR EL GRUPO 4</h4>
+    </footer>
+
+    <script type="text/javascript" src="crearpago.js"></script>
+</body>
+
+</html>

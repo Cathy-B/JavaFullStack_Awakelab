@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
+    <script src="js.js"></script>
+    <title>Administrar Asistentes</title>
+</head>
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\login.html">Login</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\administrarasistentes.html">Administrar asistentes</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\listadoaccidentes.html">Listado de accidentes</a> |
+            </nav>
+</header>
+
+ <section>
+<form action="#" id="frmcrearid">
+    <table class="col- col-s-4 "  >
+        <tr>
+            <td> ID Asistente </td>
+            <td> <input type="text"  name="id_asistente"></td>
+        </tr>
+
+        <tr>
+            <td> Nombre Asistente  </td>
+            <td> <input type="text" name="Nombre_asistente"> </td>
+        </tr>
+        <tr>
+            <td> Edad Asistente  </td>
+            <td> <input type="text" name="edad_asistente"> </td>
+        </tr>
+
+        <tr>
+            <td> Correo electronico asistente </td>
+            <td> <input type="text" name="correo_asistente"> </td>
+        </tr>
+
+        <tr>
+            <td> Telefono asistente </td>
+            <td> <input type="text"  value="+569" readonly="readonly" size="10" style="width:50px"> <input type="text" id="telefono_asistente" name="telefono_asistente" >  </td>
+
+        </tr>
+
+        <tr>
+            <td> Capacitaciones </td>
+            <td> <label for="capacitaciones">Seleccione la capacitacion que asistira:</label>
+
+                <select name="capa" id="capa">
+                  <option value="1">23/12/2020 a las 13:30 coca-cola company</option>
+                  <option value="2">22/12/2020 a las 16:30 Segurito segura</option>
+                  <option value="3">26/12/2020 a las 17:30 Don pepito aseguradora</option>
+                </select> </td>
+        </tr>
+
+        
+        <tr>
+            <td colspan="2"><button type="submit" class="centrado"  id="btnvalidar"><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\crear.png"  /></button></td>
+           
+        </tr>
+      
+        
+    </table>
+</form>
+    <table id="tbl" class= "table table-striped table-bordered" style="width:100%">
+        <thead>
+        <tr>
+            <th> ID Asistente</th>
+            <th>Nombre Asistente </th>
+            <th>Edad Asistente </th>
+            <th>Correo electronico asistente</th>
+            <th> Telefono asistente </th>
+            <th> Capacitacion a asistir </th>
+            <th> Eliminar </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Pedro Navarro</td>
+            <td>27</td>
+            <td>1@hotmail.com</td>
+            <td>+56 9 75453034</td>
+            <td>23/12/2020 a las 13:30 coca-cola company</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Pablo Diaz</td>
+            <td>29</td>
+            <td>2@gmail.com</td>
+            <td>+56 9 76436234</td>
+            <td>26/12/2020 a las 17:30 Don pepito aseguradora</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Javier Gonzales</td>
+            <td>30</td>
+            <td>3@hotmail.com</td>
+            <td>+56 9 21351451</td>
+            <td>23/12/2020 a las 13:30 coca-cola company</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Norberto Leiva</td>
+            <td>33</td>
+            <td>4@hotmail.com</td>
+            <td>+56 9 72391241</td>
+            <td>22/12/2020 a las 16:30 Segurito segura</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Judit Arjona</td>
+            <td>25</td>
+            <td>5@gmail.com</td>
+            <td>+56 9 23617473</td>
+            <td>22/12/2020 a las 16:30 Segurito segura</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Younes Alcaide</td>
+            <td>26</td>
+            <td>6@hotmail.com</td>
+            <td>+56 9 57381246</td>
+            <td>23/12/2020 a las 13:30 coca-cola company</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Alba Maria Alvaro</td>
+            <td>39</td>
+            <td>7@gmail.com</td>
+            <td>+56 9 12412723</td>
+            <td>26/12/2020 a las 17:30 Don pepito aseguradora</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Juan Enrique Lobato</td>
+            <td>40</td>
+            <td>8@hotmail.com</td>
+            <td>+56 9 73452393</td>
+            <td>23/12/2020 a las 13:30 coca-cola company</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Noe Quesada</td>
+            <td>32</td>
+            <td>9@gmail.com</td>
+            <td>+56 9 94230323</td>
+            <td>26/12/2020 a las 17:30 Don pepito aseguradora</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Gonzalo Salinas</td>
+            <td>31</td>
+            <td>10@hotmail.com</td>
+            <td>+56 9 62304541</td>
+            <td>23/12/2020 a las 13:30 coca-cola company</td>
+            <td><a  class="icono" ><img src="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\IMG\eliminar.png"  /></a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th> ID Asistente</th>
+            <th>Nombre Asistente </th>
+            <th>Edad Asistente </th>
+            <th>Correo electronico asistente</th>
+            <th> Telefono asistente </th>
+            <th> Capacitacion a asistir </th>
+            <th> Eliminar </th>
+        </tr>
+    </tfoot>
+    </table>
+
+
+
+
+
+ </section>
+
+ <footer class="col-6 col-s-5">
+     <h4>CREADO POR EL GRUPO 4</h4>
+ </footer>
+</body>
+
+<script src="validacionesasis.js"></script>
+</html>

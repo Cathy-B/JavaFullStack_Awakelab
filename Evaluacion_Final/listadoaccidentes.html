@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    
+
+    <title>Listado Accidentes</title>
+</head>
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\login.html">Login</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\administrarasistentes.html">Administrar asistentes</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\Grupal_11\listadoaccidentes.html">Listado de accidentes</a> |
+        </nav>
+    </header>
+    <form action="#" id="formaccidente">
+        <table>
+            <tr>
+                <td> ID Accidente </td>
+                <td> <input type="text"  name="id_accidente"></td>
+            </tr>
+    
+            <tr>
+                <td> Fecha Accidente  </td>
+                <td> <input type="text" name="fecha_accidente" id="fecha_accidente" readonly="readonly"> </td>
+            </tr>
+            <tr>
+                <td> Hora Accidente  </td>
+                <td> <input type="time" id="hora_accidente" name="hora_accidente"> </td>
+            </tr>
+    
+            <tr>
+                <td> Lugar </td>
+                <td> <input type="text" name="lugar"> </td>
+            </tr>
+    
+            <tr>
+                <td> Origen </td>
+                <td> <input type="text" id="origen" name="origen" >  </td>
+    
+            </tr>
+    
+            <tr>
+                <td> Cliente </td>
+                <td> <label for="cliente">Seleccione el nombre del cliente al que se asocia el accidente:</label>
+    
+                    <select name="cliente" id="cliente">
+                      <option value="0">-Seleccione-</option>
+                      <option value="1">Cliente 1</option>
+                      <option value="2">Cliente 2</option>
+                      <option value="3">Cliente 3</option>
+                    </select> </td>
+            </tr>
+            
+            <tr>
+                <td> Consecuencias </td>
+                <td> <textarea name="consecuencias" id="consecuencias" cols="30" rows="10"></textarea></td>
+                
+            </tr>
+            
+            <tr>
+                <td colspan="2"><button type="submit" class="centrado"  id="btnvalidar"><img src="C:\Users\Catherine\Documents\JAVA FullStack\ModuloIII\EVALUACIONES\EVALUACION_FINAL\Evaluacion_Final\IMG\crear.png"  /></button></td>
+               
+            </tr>
+          
+            
+        </table>
+    </form>
+
+    <script src="validacionlistacci.js"></script>
+</body>
+</html>

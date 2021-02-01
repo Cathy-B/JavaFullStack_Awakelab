@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responder Checklist</title>
+    
+</head>
+
+<body>
+    <header class="col-6 col-s-5">
+        <nav class="nav_diseño">
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\listadousuarios.html">Listar usuarios</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\crearusuario.html">Crear usuario</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarcliente.html">Editar cliente</a> |
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editaradministrativo.html">Editar
+                administrativo</a>|
+            <a href="C:\Users\yopuk\OneDrive\Escritorio\ejercicio grupal\editarprofesional.html">Editar profesional</a>
+        </nav>
+    </header>
+
+    <form name="form1" id="form1">
+
+        <table>
+
+            <tr>
+
+                <td class="resal">ID Chequeo</td>
+
+                <td class="resal">Nombre chequeo</td>
+
+                <td class="resal">Verificar</td>
+
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Chequear estado de personal</td>
+
+                <td><input type="checkbox" name="checkbox" id="chk1"  value="chequear estado personal"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Chequear estado de puertas</td>
+
+                <td><input type="checkbox" name="checkbox" id="chk2" value="chequear estado puertas"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="button" name="miboton" value="Validar" onclick="contar();" class="centrado"></td>
+
+                
+            </tr>
+        </table>
+
+        
+    </form>
+
+    <div id="listado">
+        Checkbox Seleccionados 
+    </div>
+    <script type="text/javascript">
+        function contar() {
+         var checkboxes = document.getElementById("form1").checkbox; //Array que contiene los checkbox
+        
+         var cont = 0; //Variable que lleva la cuenta de los checkbox pulsados
+            var tabla= "<table>"+ "<tr>"+ "<td>Nombre Chequeo</td>"+"</tr>";
+                           
+         for (var x=0; x < checkboxes.length; x++) {
+          if (checkboxes[x].checked) {
+           cont = cont + 1;
+
+           var contenido =document.getElementById("listado");
+            var nombre =document.getElementById("chk"+cont).value;
+            contenido.innerHTML= tabla+="<tr><td>"+ nombre+"</td></tr>";
+          }
+         }
+         
+
+         tabla+="</table>";
+         alert ("El número de checkbox pulsados es " + cont);
+
+        }
+       </script>
+    <script type="text/javascript" language="javascript">
+        
+        </script>
+
+    <footer class="col-6 col-s-5" id="footer">
+        <h4>CREADO POR EL GRUPO 4</h4>
+    </footer>
+</body>
+
+</html>
