@@ -3,8 +3,10 @@ package cl.awakelab.evaluacion.modelo;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name="profesionales")
 public class Profesional {
 
 	@Id
@@ -17,14 +19,14 @@ public class Profesional {
 	private String telefono_pro;
 	private String titulo;
 	private String proyecto;
-	private int usuario_runusuario;
+	private String usuario_runusuario;
 	
 	public Profesional() {
 		super();
 	}
 
 	public Profesional(String runprofesional, String nombre_pro, String apellido_pro, String telefono_pro,
-			String titulo, String proyecto, int usuario_runusuario) {
+			String titulo, String proyecto, String usuario_runusuario) {
 		super();
 		this.runprofesional = runprofesional;
 		this.nombre_pro = nombre_pro;
@@ -83,11 +85,11 @@ public class Profesional {
 		this.proyecto = proyecto;
 	}
 
-	public int getUsuario_runusuario() {
+	public String getUsuario_runusuario() {
 		return usuario_runusuario;
 	}
 
-	public void setUsuario_runusuario(int usuario_runusuario) {
+	public void setUsuario_runusuario(String usuario_runusuario) {
 		this.usuario_runusuario = usuario_runusuario;
 	}
 

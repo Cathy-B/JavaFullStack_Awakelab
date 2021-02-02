@@ -146,7 +146,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="run_usuario " id="run_usuario" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el rut del usuario'" placeholder="Ingrese el rut del usuario">
+                                        <input class="form-control valid" name="run_usuario" id="run_usuario" type="text" >
                                     </div>
                                 </div>
                                 <div class="col-12">
