@@ -9,8 +9,7 @@ import javax.persistence.Table;
 @Table (name="profesionales")
 public class Profesional {
 
-	@Id
-	private String runprofesional;
+	private int runprofesional;
 	@Column(name = "nombres")
 	private String nombre_pro;
 	@Column(name = "apellidos")
@@ -19,14 +18,15 @@ public class Profesional {
 	private String telefono_pro;
 	private String titulo;
 	private String proyecto;
-	private String usuario_runusuario;
+	@Id
+	private int usuario_runusuario;
 	
 	public Profesional() {
 		super();
 	}
 
-	public Profesional(String runprofesional, String nombre_pro, String apellido_pro, String telefono_pro,
-			String titulo, String proyecto, String usuario_runusuario) {
+	public Profesional(int runprofesional, String nombre_pro, String apellido_pro, String telefono_pro,
+			String titulo, String proyecto, int usuario_runusuario) {
 		super();
 		this.runprofesional = runprofesional;
 		this.nombre_pro = nombre_pro;
@@ -37,11 +37,11 @@ public class Profesional {
 		this.usuario_runusuario = usuario_runusuario;
 	}
 
-	public String getRunprofesional() {
+	public int getRunprofesional() {
 		return runprofesional;
 	}
 
-	public void setRunprofesional(String runprofesional) {
+	public void setRunprofesional(int runprofesional) {
 		this.runprofesional = runprofesional;
 	}
 
@@ -85,11 +85,11 @@ public class Profesional {
 		this.proyecto = proyecto;
 	}
 
-	public String getUsuario_runusuario() {
+	public int getUsuario_runusuario() {
 		return usuario_runusuario;
 	}
 
-	public void setUsuario_runusuario(String usuario_runusuario) {
+	public void setUsuario_runusuario(int usuario_runusuario) {
 		this.usuario_runusuario = usuario_runusuario;
 	}
 

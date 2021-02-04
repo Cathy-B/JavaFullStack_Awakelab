@@ -48,7 +48,7 @@ public class CapacitacionControlador {
 			@RequestParam ("hora") String hora,
 			@RequestParam ("lugar") String lugar,
 			@RequestParam ("duracion") int duracion,
-			@RequestParam ("rut") String rut) {
+			@RequestParam ("rut") int rut) {
 		
 		logger.info("Proceso la creación de capacitaciones");
 		

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,12 +59,12 @@ public class UsuarioControlador {
 	
 	@RequestMapping (value="/procesausuario",method = RequestMethod.POST)
 	public String procesarCrearUs(Model model,
-			@RequestParam ("run_usuario") String rut_user,
+			@RequestParam ("run_usuario") int rut_user,
 			@RequestParam ("txtnombre") String nombre_user,
 			@RequestParam ("txtfecha") String fecha_nacimiento,
 			@RequestParam ("tipousuario") int tipo,
 			//Datos cliente
-			@RequestParam (value="run", defaultValue="none") String runcliente,
+			@RequestParam (value="run", defaultValue="0") int runcliente,
 			@RequestParam (value="nombres", defaultValue="none") String nombre_cli,
 			@RequestParam (value="apellidos", defaultValue="none") String apellido_cli,
 			@RequestParam (value="telefono", defaultValue="none") String telefono_cli,
@@ -73,13 +74,13 @@ public class UsuarioControlador {
 			@RequestParam (value="comuna", defaultValue="none") String comuna_cli,
 			@RequestParam (value="edad", defaultValue="0") int edad_cli,
 			//Datos Administrativos
-			@RequestParam (value="run_adm", defaultValue="none") String run_adm,
+			@RequestParam (value="run_adm", defaultValue="0") int run_adm,
 			@RequestParam (value="nombres_adm", defaultValue="none") String nombre_adm,
 			@RequestParam (value="apellidos_adm", defaultValue="none") String apellido_adm,
 			@RequestParam (value="correo_adm", defaultValue="none") String correo_adm,
 			@RequestParam (value="area_adm", defaultValue="none") String area_adm,
 			//Datos Profesionales
-			@RequestParam (value="run_pro", defaultValue="none") String runprofesional,
+			@RequestParam (value="run_pro", defaultValue="0") int runprofesional,
 			@RequestParam (value="nombre_pro", defaultValue="none") String nombre_pro,
 			@RequestParam (value="apellido_pro", defaultValue="none") String apellido_pro,
 			@RequestParam (value="telefono_pro", defaultValue="none") String telefono_pro,
@@ -176,5 +177,144 @@ public class UsuarioControlador {
 			return "msgcrear";
 	}
 	
+	@RequestMapping(value="/editar/{usuario_runusuario}/bar/{tipo}", method = RequestMethod.GET)
+	public String editarUsuario(Model model, @PathVariable int usuario_runusuario, @PathVariable int tipo) {
+		
+		//Usuario usu = us.obtenerUsuarioPorId(rut_user);
+		logger.info("Entro a la edición de usuario");
+		String pagina = "";
+		
+		if(tipo == 1) {
+			
+			
+			
+		}else if(tipo == 2) {
+			
+			
+			
+		}else if(tipo == 3) {
+			
+		
+			Profesional pro = ps.obtenerProfesionalPorId(usuario_runusuario);
+			logger.info("Entro a la edición de usuario tipo profesional");
+			model.addAttribute("profesional", pro);
+			
+			pagina = "frmeditarprofesional";
+		}
+		
+		//model.addAttribute("user", usu);
+		return pagina;
+	}
 	
+	@RequestMapping(value="/procesareditarpro", method = RequestMethod.POST)
+	public String editarProfesionalProcesar(Model model, 
+			@RequestParam ("run_pro") int runprofesional,
+			@RequestParam ("nombre_pro") String nombre_pro,
+			@RequestParam ("apellido_pro") String apellido_pro,
+			@RequestParam ("telefono_pro") String telefono_pro,
+			@RequestParam ("titulo") String titulo,
+			@RequestParam ("proyecto") String proyecto,
+			@RequestParam ("run_usuario") int usuario_runusuario) {
+		
+		logger.info("Proceso la edición de profesionales");
+		Profesional pro = new Profesional();
+		pro.setRunprofesional(runprofesional);
+		pro.setNombre_pro(nombre_pro);
+		pro.setApellido_pro(apellido_pro);
+		pro.setTelefono_pro(telefono_pro);
+		pro.setTitulo(titulo);
+		pro.setProyecto(proyecto);
+		pro.setUsuario_runusuario(usuario_runusuario);
+		
+		boolean result = ps.editarProfesional(pro);
+		String mensaje = "";
+		
+		if (result) {
+			mensaje = "El usuario tipo profesional fue editado sin inconvenientes";
+			logger.info("Se editó el usuario tipo profesional");
+		}
+		else {
+			mensaje = "Ocurrió un error al momento de ejecutar la edición";
+			logger.error("Fallo al editar el usuario tipo profesional");
+		}
+
+		model.addAttribute("msgepro", mensaje);
+		return "msgeditar";
+	}
+	
+	@RequestMapping(value="/procesareditarcli", method = RequestMethod.POST)
+	public String editarClienteProcesar(Model model, 
+			@RequestParam ("run") int runcliente,
+			@RequestParam ("nombres") String nombre_cli,
+			@RequestParam ("apellidos") String apellido_cli,
+			@RequestParam ("telefono") String telefono_cli,
+			@RequestParam ("afps") String afp_cli,
+			@RequestParam ("salud") int salud_cli,
+			@RequestParam ("direccion") String direccion_cli,
+			@RequestParam ("comuna") String comuna_cli,
+			@RequestParam ("edad") int edad_cli,
+			@RequestParam ("run_usuario") int usuario_runusuario) {
+		
+		logger.info("Proceso la edición de clientes");
+		Cliente cli = new Cliente();
+		cli.setRun_cliente(runcliente);
+		cli.setNombres(nombre_cli);
+		cli.setApellidos(apellido_cli);
+		cli.setTelefono(telefono_cli);
+		cli.setAfp(afp_cli);
+		cli.setSistema_salud(salud_cli);
+		cli.setDireccion(direccion_cli);
+		cli.setComuna(comuna_cli);
+	    cli.setEdad(edad_cli);
+	    cli.setRun_usuario(usuario_runusuario);
+		
+		boolean result = cs.editarCliente(cli);
+		String mensaje = "";
+		
+		if (result) {
+			mensaje = "El usuario tipo cliente fue editado sin inconvenientes";
+			logger.info("Se editó el usuario tipo cliente");
+		}
+		else {
+			mensaje = "Ocurrió un error al momento de ejecutar la edición";
+			logger.error("Fallo al editar el usuario tipo cliente");
+		}
+
+		model.addAttribute("msgecli", mensaje);
+		return "msgeditar";
+	}
+	
+	@RequestMapping(value="/procesareditaradm", method = RequestMethod.POST)
+	public String editarAdministrativoProcesar(Model model, 
+			@RequestParam ("run_adm") int run_adm,
+			@RequestParam ("nombres_adm") String nombre_adm,
+			@RequestParam ("apellidos_adm") String apellido_adm,
+			@RequestParam ("correo_adm") String correo_adm,
+			@RequestParam ("area_adm") String area_adm,
+			@RequestParam ("run_usuario") int usuario_runusuario) {
+		
+		logger.info("Proceso la edición de administrativos");
+		Administrativo adm = new Administrativo();
+		adm.setRun_adm(run_adm);
+		adm.setNombres_adm(nombre_adm);
+		adm.setApellidos_adm(apellido_adm);
+		adm.setCorreo_adm(correo_adm);
+		adm.setArea_adm(area_adm);
+		adm.setRun_usuario(usuario_runusuario);
+		
+		boolean result = as.editarAdministrativo(adm);
+		String mensaje = "";
+		
+		if (result) {
+			mensaje = "El usuario tipo administrativo fue editado sin inconvenientes";
+			logger.info("Se editó el usuario tipo administrativo");
+		}
+		else {
+			mensaje = "Ocurrió un error al momento de ejecutar la edición";
+			logger.error("Fallo al editar el usuario tipo administrativo");
+		}
+
+		model.addAttribute("msgeadm", mensaje);
+		return "msgeditar";
+	}
 }

@@ -40,6 +40,7 @@
           <th>Fecha de Nacimiento</th>
           <th>Rut Usuario</th>
           <th>Tipo Usuario</th>
+          <th>Editar</th>
         </tr>
         </thead>
         
@@ -48,8 +49,9 @@
         <tr>
           <td><c:out value="${us.getNombre()}" /></td>
           <td><c:out value="${us.getFecha_nacimiento()}" /></td>
-          <td><c:out value="${us.getRut_usuario()}" /></td>
+          <td><c:out value="${us.getRutusuario()}" /></td>
           <td><c:out value="${us.getTipo()}" /></td>
+          <td><a href='<c:out value="${pageContext.request.contextPath}" />/editar/<c:out value="${us.getRutusuario()}" />/bar/<c:out value="${us.getTipo()}"/>'>Editar</a>&nbsp;</td>
         </tr>
         </c:forEach>
         </tbody>

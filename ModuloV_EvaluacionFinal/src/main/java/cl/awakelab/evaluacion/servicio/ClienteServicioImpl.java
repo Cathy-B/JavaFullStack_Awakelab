@@ -19,4 +19,17 @@ public class ClienteServicioImpl implements ClienteServicio{
 		return true;
 	}
 
+	@Override
+	public boolean editarCliente(Cliente cliente) {
+		
+		cr.save(cliente);
+		return true;
+	}
+
+	@Override
+	public Cliente obtenerCliPorId(int usuario_runusuario) {
+		
+		return cr.findOne(usuario_runusuario);
+	}
+
 }

@@ -11,7 +11,7 @@ public class Usuario {
 
 	@Id
 	@Column(name = "rutusuario")
-	private String rutusuario;
+	private int rutusuario;
 	private String nombre;
 	@Column(name = "fechanacimiento")
 	private String fecha_nacimiento;
@@ -21,7 +21,7 @@ public class Usuario {
 		super();
 	}
 
-	public Usuario(String rutusuario, String nombre, String fecha_nacimiento, int tipo) {
+	public Usuario(int rutusuario, String nombre, String fecha_nacimiento, int tipo) {
 		super();
 		this.rutusuario = rutusuario;
 		this.nombre = nombre;
@@ -29,11 +29,11 @@ public class Usuario {
 		this.tipo = tipo;
 	}
 
-	public String getRutusuario() {
+	public int getRutusuario() {
 		return rutusuario;
 	}
 
-	public void setRutusuario(String rutusuario) {
+	public void setRutusuario(int rutusuario) {
 		this.rutusuario = rutusuario;
 	}
 

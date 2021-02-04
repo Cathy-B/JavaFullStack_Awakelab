@@ -9,9 +9,9 @@ import javax.persistence.Table;
 @Table(name = "administrativos")
 public class Administrativo {
 
-	@Id
+	
 	@Column(name = "runadministrativo")
-	private String run_adm;
+	private int run_adm;
 	@Column(name = "nombres")
 	private String nombres_adm;
 	@Column(name = "apellidos")
@@ -20,15 +20,16 @@ public class Administrativo {
 	private String correo_adm;
 	@Column(name = "area")
 	private String area_adm;
+	@Id
 	@Column(name = "usuario_runusuario")
-	private String run_usuario;
+	private int run_usuario;
 	
 	public Administrativo() {
 		super();
 	}
 
-	public Administrativo(String run_adm, String nombres_adm, String apellidos_adm, String correo_adm, String area_adm,
-			String run_usuario) {
+	public Administrativo(int run_adm, String nombres_adm, String apellidos_adm, String correo_adm, String area_adm,
+			int run_usuario) {
 		super();
 		this.run_adm = run_adm;
 		this.nombres_adm = nombres_adm;
@@ -38,11 +39,11 @@ public class Administrativo {
 		this.run_usuario = run_usuario;
 	}
 
-	public String getRun_adm() {
+	public int getRun_adm() {
 		return run_adm;
 	}
 
-	public void setRun_adm(String run_adm) {
+	public void setRun_adm(int run_adm) {
 		this.run_adm = run_adm;
 	}
 
@@ -78,11 +79,11 @@ public class Administrativo {
 		this.area_adm = area_adm;
 	}
 
-	public String getRun_usuario() {
+	public int getRun_usuario() {
 		return run_usuario;
 	}
 
-	public void setRun_usuario(String run_usuario) {
+	public void setRun_usuario(int run_usuario) {
 		this.run_usuario = run_usuario;
 	}
 

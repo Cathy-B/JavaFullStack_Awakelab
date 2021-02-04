@@ -9,9 +9,9 @@ import javax.persistence.Table;
 @Table (name="cliente")
 public class Cliente {
 
-	@Id
+	
 	@Column(name = "rutcliente")
-	private String run_cliente;
+	private int run_cliente;
 	@Column(name = "clinombre")
 	private String nombres;
 	@Column(name = "cliapellidos")
@@ -28,15 +28,16 @@ public class Cliente {
 	private String comuna;
 	@Column(name = "cliedad")
 	private int edad;
+	@Id
 	@Column(name = "usuario_runusuario")
-	private String run_usuario;
+	private int run_usuario;
 	
 	public Cliente() {
 		super();
 	}
 
-	public Cliente(String run_cliente, String nombres, String apellidos, String telefono, String afp, int sistema_salud,
-			String direccion, String comuna, int edad, String run_usuario) {
+	public Cliente(int run_cliente, String nombres, String apellidos, String telefono, String afp, int sistema_salud,
+			String direccion, String comuna, int edad, int run_usuario) {
 		super();
 		this.run_cliente = run_cliente;
 		this.nombres = nombres;
@@ -50,11 +51,11 @@ public class Cliente {
 		this.run_usuario = run_usuario;
 	}
 
-	public String getRun_cliente() {
+	public int getRun_cliente() {
 		return run_cliente;
 	}
 
-	public void setRun_cliente(String run_cliente) {
+	public void setRun_cliente(int run_cliente) {
 		this.run_cliente = run_cliente;
 	}
 
@@ -122,11 +123,11 @@ public class Cliente {
 		this.edad = edad;
 	}
 
-	public String getRun_usuario() {
+	public int getRun_usuario() {
 		return run_usuario;
 	}
 
-	public void setRun_usuario(String run_usuario) {
+	public void setRun_usuario(int run_usuario) {
 		this.run_usuario = run_usuario;
 	}
 

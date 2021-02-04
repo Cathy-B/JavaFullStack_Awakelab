@@ -1,5 +1,6 @@
 package cl.awakelab.evaluacion.servicio;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +21,19 @@ public class ProfesionalServicioImpl implements ProfesionalServicio{
 		return true;
 	}
 
+	@Override
+	public boolean editarProfesional(Profesional profesional) {
+		
+		pr.save(profesional);
+		return true;
+	}
+
+	@Override
+	public Profesional obtenerProfesionalPorId(int usuario_runusuario) {
+		
+		return pr.findOne(usuario_runusuario);
+	}
+
+	
+	
 }

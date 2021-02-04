@@ -27,12 +27,6 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 		return true;
 	}
 
-	@Override
-	public boolean eliminarUsuario(Usuario usuario) {
-		
-		ur.delete(usuario);
-		return true;
-	}
 
 	@Override
 	public boolean editarUsuario(Usuario usuario) {
@@ -40,6 +34,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 		ur.save(usuario);
 		return true;
 	}
+
 
 	@Override
 	public Usuario obtenerUsuarioPorId(int rut_user) {

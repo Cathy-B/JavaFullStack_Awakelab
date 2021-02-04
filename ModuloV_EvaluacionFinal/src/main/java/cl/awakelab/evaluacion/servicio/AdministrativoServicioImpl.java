@@ -19,6 +19,19 @@ public class AdministrativoServicioImpl implements AdministrativoServicio{
 		return true;
 	}
 
+	@Override
+	public boolean editarAdministrativo(Administrativo administrativo) {
+		
+		ar.save(administrativo);
+		return true;
+	}
+
+	@Override
+	public Administrativo obtenerAdmPorId(int usuario_runusuario) {
+		
+		return ar.findOne(usuario_runusuario);
+	}
+
 	
 	
 }

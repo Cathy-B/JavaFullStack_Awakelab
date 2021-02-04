@@ -12,14 +12,14 @@ public class Capacitacion {
 	private String caphora;
 	private String caplugar;
 	private int capduracion;
-	private String cliente_rutCliente;
+	private int cliente_rutCliente;
 	
 	public Capacitacion() {
 		super();
 	}
 
 	public Capacitacion(int idcapacitacion, String capfecha, String caphora, String caplugar, int capduracion,
-			String cliente_rutCliente) {
+			int cliente_rutCliente) {
 		super();
 		this.idcapacitacion = idcapacitacion;
 		this.capfecha = capfecha;
@@ -69,11 +69,11 @@ public class Capacitacion {
 		this.capduracion = capduracion;
 	}
 
-	public String getCliente_rutCliente() {
+	public int getCliente_rutCliente() {
 		return cliente_rutCliente;
 	}
 
-	public void setCliente_rutCliente(String cliente_rutCliente) {
+	public void setCliente_rutCliente(int cliente_rutCliente) {
 		this.cliente_rutCliente = cliente_rutCliente;
 	}
 
