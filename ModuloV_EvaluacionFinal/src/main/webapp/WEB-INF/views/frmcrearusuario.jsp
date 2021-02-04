@@ -84,10 +84,11 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">
-                                            <li><a href="inicioadministrativo.html">Inicio Administrativo</a></li>
-                                            <li><a href="listausuarios.html">Lista Usuarios</a></li>                                                                                                                 
-                                            <li><a href="crearusuarios.html">Crear Usuario</a></li>
-                                            <li><a href="#">Crear Pago</a></li>
+                                           <li><a href="<%=request.getContextPath()%>/inicioadmi">Inicio Administrativo</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/listausuarios">Lista Usuarios</a></li>                                                                                                                 
+                                            <li><a href="<%=request.getContextPath()%>/creausuario">Crear Usuario</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/creapago">Crear Pago</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/listapago">Crear Pago</a></li>
                                             <li><a href="#">Administrar Chequeos</a></li>
                                         </ul>
                                     </nav>
@@ -146,7 +147,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="run_usuario" id="run_usuario" type="text" >
+                                        <input class="form-control valid" name="run_usuario" id="run_usuario" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el run usuario'" placeholder="Ingrese su run usuario">
                                     </div>
                                 </div>
                                 <div class="col-12">

@@ -104,7 +104,7 @@ public class UsuarioControlador {
 			cli.setDireccion(direccion_cli);
 			cli.setComuna(comuna_cli);
 			cli.setEdad(edad_cli);
-			cli.setRun_usuario(rut_user);
+			cli.setRunusuario(rut_user);
 			
 			boolean result1 = us.crearUsuario(usuario);
 			boolean result2 = cs.crearCliente(cli);
@@ -129,7 +129,7 @@ public class UsuarioControlador {
 			adm.setApellidos_adm(apellido_adm);
 			adm.setCorreo_adm(correo_adm);
 			adm.setArea_adm(area_adm);
-			adm.setRun_usuario(rut_user);
+			adm.setRunusuario(rut_user);
 			
 			boolean result3 = us.crearUsuario(usuario);
 			boolean result4 = as.crearAdministrativo(adm);
@@ -155,7 +155,7 @@ public class UsuarioControlador {
 			pro.setTelefono_pro(telefono_pro);
 			pro.setTitulo(titulo);
 			pro.setProyecto(proyecto);
-			pro.setUsuario_runusuario(rut_user);
+			pro.setRunusuario(rut_user);
 			
 			boolean result5 = us.crearUsuario(usuario);
 			boolean result6 = ps.crearProfesional(pro);
@@ -180,29 +180,38 @@ public class UsuarioControlador {
 	@RequestMapping(value="/editar/{usuario_runusuario}/bar/{tipo}", method = RequestMethod.GET)
 	public String editarUsuario(Model model, @PathVariable int usuario_runusuario, @PathVariable int tipo) {
 		
-		//Usuario usu = us.obtenerUsuarioPorId(rut_user);
 		logger.info("Entro a la edición de usuario");
 		String pagina = "";
 		
 		if(tipo == 1) {
 			
+			List<Cliente> listcli = cs.buscarPorRunusuario(usuario_runusuario);
+			Cliente cli = listcli.get(0);
+			logger.info("Entro a la edición de usuario tipo administrativo");
+			model.addAttribute("cliente", cli);
+			
+			pagina = "frmeditarcliente";
 			
 			
 		}else if(tipo == 2) {
 			
+			List<Administrativo> listadm = as.buscarPorRunusuario(usuario_runusuario);
+			Administrativo adm = listadm.get(0);
+			logger.info("Entro a la edición de usuario tipo administrativo");
+			model.addAttribute("administrativo", adm);
 			
+			pagina = "frmeditaradministrativo";
 			
 		}else if(tipo == 3) {
 			
-		
-			Profesional pro = ps.obtenerProfesionalPorId(usuario_runusuario);
+			List<Profesional> listpro = ps.buscarPorRunusuario(usuario_runusuario);
+			Profesional pro = listpro.get(0);
 			logger.info("Entro a la edición de usuario tipo profesional");
 			model.addAttribute("profesional", pro);
 			
 			pagina = "frmeditarprofesional";
 		}
 		
-		//model.addAttribute("user", usu);
 		return pagina;
 	}
 	
@@ -224,7 +233,7 @@ public class UsuarioControlador {
 		pro.setTelefono_pro(telefono_pro);
 		pro.setTitulo(titulo);
 		pro.setProyecto(proyecto);
-		pro.setUsuario_runusuario(usuario_runusuario);
+		pro.setRunusuario(usuario_runusuario);
 		
 		boolean result = ps.editarProfesional(pro);
 		String mensaje = "";
@@ -266,7 +275,7 @@ public class UsuarioControlador {
 		cli.setDireccion(direccion_cli);
 		cli.setComuna(comuna_cli);
 	    cli.setEdad(edad_cli);
-	    cli.setRun_usuario(usuario_runusuario);
+	    cli.setRunusuario(usuario_runusuario);
 		
 		boolean result = cs.editarCliente(cli);
 		String mensaje = "";
@@ -300,7 +309,7 @@ public class UsuarioControlador {
 		adm.setApellidos_adm(apellido_adm);
 		adm.setCorreo_adm(correo_adm);
 		adm.setArea_adm(area_adm);
-		adm.setRun_usuario(usuario_runusuario);
+		adm.setRunusuario(usuario_runusuario);
 		
 		boolean result = as.editarAdministrativo(adm);
 		String mensaje = "";

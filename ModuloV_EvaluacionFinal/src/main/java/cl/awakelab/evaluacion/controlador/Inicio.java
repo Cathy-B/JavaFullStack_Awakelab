@@ -18,4 +18,12 @@ public class Inicio {
 		logger.info("Página de Inicio");
 		return "frminicio";
 	}
+	
+	@RequestMapping (value="/inicioadmi",method = RequestMethod.GET)
+	public String mostrarInicioAdmi() {
+		
+		logger.info("Página de Inicio Administrativo");
+		return "frminicioadministrativo";
+	}
+	
 }

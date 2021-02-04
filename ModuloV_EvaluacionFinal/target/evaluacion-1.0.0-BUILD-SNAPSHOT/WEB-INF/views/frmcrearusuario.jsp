@@ -146,7 +146,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="run_usuario" id="run_usuario" type="text" >
+                                        <input class="form-control valid" name="run_usuario" id="run_usuario" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el run usuario'" placeholder="Ingrese su run usuario">
                                     </div>
                                 </div>
                                 <div class="col-12">

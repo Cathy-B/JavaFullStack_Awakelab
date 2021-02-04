@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Table(name = "administrativos")
 public class Administrativo {
 
-	
+	@Id
 	@Column(name = "runadministrativo")
 	private int run_adm;
 	@Column(name = "nombres")
@@ -20,23 +20,22 @@ public class Administrativo {
 	private String correo_adm;
 	@Column(name = "area")
 	private String area_adm;
-	@Id
 	@Column(name = "usuario_runusuario")
-	private int run_usuario;
+	private int runusuario;
 	
 	public Administrativo() {
 		super();
 	}
 
 	public Administrativo(int run_adm, String nombres_adm, String apellidos_adm, String correo_adm, String area_adm,
-			int run_usuario) {
+			int runusuario) {
 		super();
 		this.run_adm = run_adm;
 		this.nombres_adm = nombres_adm;
 		this.apellidos_adm = apellidos_adm;
 		this.correo_adm = correo_adm;
 		this.area_adm = area_adm;
-		this.run_usuario = run_usuario;
+		this.runusuario = runusuario;
 	}
 
 	public int getRun_adm() {
@@ -79,19 +78,19 @@ public class Administrativo {
 		this.area_adm = area_adm;
 	}
 
-	public int getRun_usuario() {
-		return run_usuario;
+	public int getRunusuario() {
+		return runusuario;
 	}
 
-	public void setRun_usuario(int run_usuario) {
-		this.run_usuario = run_usuario;
+	public void setRunusuario(int runusuario) {
+		this.runusuario = runusuario;
 	}
 
 	@Override
 	public String toString() {
 		return "Administrativo [run_adm=" + run_adm + ", nombres_adm=" + nombres_adm + ", apellidos_adm="
-				+ apellidos_adm + ", correo_adm=" + correo_adm + ", area_adm=" + area_adm + ", run_usuario="
-				+ run_usuario + "]";
+				+ apellidos_adm + ", correo_adm=" + correo_adm + ", area_adm=" + area_adm + ", runusuario="
+				+ runusuario + "]";
 	}
 	
 }

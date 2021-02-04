@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Table (name="profesionales")
 public class Profesional {
 
+	@Id
 	private int runprofesional;
 	@Column(name = "nombres")
 	private String nombre_pro;
@@ -18,15 +19,15 @@ public class Profesional {
 	private String telefono_pro;
 	private String titulo;
 	private String proyecto;
-	@Id
-	private int usuario_runusuario;
+	@Column(name="usuario_runusuario")
+	private int runusuario;
 	
 	public Profesional() {
 		super();
 	}
 
 	public Profesional(int runprofesional, String nombre_pro, String apellido_pro, String telefono_pro,
-			String titulo, String proyecto, int usuario_runusuario) {
+			String titulo, String proyecto, int runusuario) {
 		super();
 		this.runprofesional = runprofesional;
 		this.nombre_pro = nombre_pro;
@@ -34,7 +35,7 @@ public class Profesional {
 		this.telefono_pro = telefono_pro;
 		this.titulo = titulo;
 		this.proyecto = proyecto;
-		this.usuario_runusuario = usuario_runusuario;
+		this.runusuario = runusuario;
 	}
 
 	public int getRunprofesional() {
@@ -85,19 +86,19 @@ public class Profesional {
 		this.proyecto = proyecto;
 	}
 
-	public int getUsuario_runusuario() {
-		return usuario_runusuario;
+	public int getRunusuario() {
+		return runusuario;
 	}
 
-	public void setUsuario_runusuario(int usuario_runusuario) {
-		this.usuario_runusuario = usuario_runusuario;
+	public void setRunusuario(int runusuario) {
+		this.runusuario = runusuario;
 	}
 
 	@Override
 	public String toString() {
 		return "Profesional [runprofesional=" + runprofesional + ", nombre_pro=" + nombre_pro + ", apellido_pro="
 				+ apellido_pro + ", telefono_pro=" + telefono_pro + ", titulo=" + titulo + ", proyecto=" + proyecto
-				+ ", usuario_runusuario=" + usuario_runusuario + "]";
+				+ ", runusuario=" + runusuario + "]";
 	}
 	
 	

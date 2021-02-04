@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Table (name="cliente")
 public class Cliente {
 
-	
+	@Id
 	@Column(name = "rutcliente")
 	private int run_cliente;
 	@Column(name = "clinombre")
@@ -28,16 +28,15 @@ public class Cliente {
 	private String comuna;
 	@Column(name = "cliedad")
 	private int edad;
-	@Id
 	@Column(name = "usuario_runusuario")
-	private int run_usuario;
+	private int runusuario;
 	
 	public Cliente() {
 		super();
 	}
 
 	public Cliente(int run_cliente, String nombres, String apellidos, String telefono, String afp, int sistema_salud,
-			String direccion, String comuna, int edad, int run_usuario) {
+			String direccion, String comuna, int edad, int runusuario) {
 		super();
 		this.run_cliente = run_cliente;
 		this.nombres = nombres;
@@ -48,7 +47,7 @@ public class Cliente {
 		this.direccion = direccion;
 		this.comuna = comuna;
 		this.edad = edad;
-		this.run_usuario = run_usuario;
+		this.runusuario = runusuario;
 	}
 
 	public int getRun_cliente() {
@@ -123,19 +122,19 @@ public class Cliente {
 		this.edad = edad;
 	}
 
-	public int getRun_usuario() {
-		return run_usuario;
+	public int getRunusuario() {
+		return runusuario;
 	}
 
-	public void setRun_usuario(int run_usuario) {
-		this.run_usuario = run_usuario;
+	public void setRunusuario(int runusuario) {
+		this.runusuario = runusuario;
 	}
 
 	@Override
 	public String toString() {
 		return "Cliente [run_cliente=" + run_cliente + ", nombres=" + nombres + ", apellidos=" + apellidos
 				+ ", telefono=" + telefono + ", afp=" + afp + ", sistema_salud=" + sistema_salud + ", direccion="
-				+ direccion + ", comuna=" + comuna + ", edad=" + edad + ", run_usuario=" + run_usuario + "]";
+				+ direccion + ", comuna=" + comuna + ", edad=" + edad + ", runusuario=" + runusuario + "]";
 	}
 	
 	

@@ -165,7 +165,7 @@
               				</div>
               				<div class='col-12'>
                                     <div class='form-group'>
-                                      <input class='form-control w-100'  name='run_usuario' id='run_usuario' value= '<c:out value="${profesional.getUsuario_runusuario()}" ></c:out>' readonly>
+                                      <input class='form-control w-100'  name='run_usuario' id='run_usuario' value= '<c:out value="${profesional.getRunusuario()}" ></c:out>' readonly>
                                     </div>
               				</div>
                             <div class="form-group mt-3">
