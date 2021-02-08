@@ -75,15 +75,16 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo.png" alt=""></a>
+                                    <a href="<%=request.getContextPath()%>/inicioadmi" class="big-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo.png" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/loder-logo.png" alt=""></a>
+                                    <a href="<%=request.getContextPath()%>/inicioadmi" class="small-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/loder-logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
+                                    <!--  
                                         <ul id="navigation">
                                             <li><a href="<%=request.getContextPath()%>/inicioadmi">Inicio Administrativo</a></li>
                                             <li><a href="<%=request.getContextPath()%>/listausuarios">Lista Usuarios</a></li>                                                                                                                 
@@ -91,14 +92,14 @@
                                             <li><a href="<%=request.getContextPath()%>/creapago">Crear Pago</a></li>
                                             <li><a href="<%=request.getContextPath()%>/listapago">Crear Pago</a></li>
                                             <li><a href="#">Administrar Chequeos</a></li>
-                                        </ul>
+                                        </ul>-->
                                     </nav>
                                 </div>
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
-                                <div class="header-right-btn f-right d-none d-lg-block">
+                                <!--  <div class="header-right-btn f-right d-none d-lg-block">
                                     <a href="#" class="btn">Iniciar Sesion</a>
-                                </div>
+                                </div>-->
                             </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
@@ -157,7 +158,7 @@
                              <div class="single-footer-caption mb-30">
                                  <!-- logo -->
                                  <div class="footer-logo">
-                                     <a href="index.html"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
+                                     <a href="<%=request.getContextPath()%>/inicioadmi"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
                                  </div>
                                  <div class="footer-tittle">
                                      <div class="footer-pera">
@@ -171,8 +172,8 @@
                                  <div class="footer-tittle">
                                      <h4>Links</h4>
                                      <ul>
-                                         <li><a href="about.html">Sobre Nosotros</a></li>
-                                         <li><a href="contact.html">Contactanos</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/quiensomos">Sobre Nosotros</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/creacontacto">Contactanos</a></li>
                                      </ul>
                                  </div>
                              </div>

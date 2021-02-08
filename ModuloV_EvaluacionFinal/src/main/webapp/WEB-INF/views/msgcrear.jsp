@@ -83,21 +83,22 @@
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
-                                        <ul id="navigation">
+                                        <!--  <ul id="navigation">
                                             <li><a href="<%=request.getContextPath()%>/inicioadmi">Inicio Administrativo</a></li>
                                             <li><a href="<%=request.getContextPath()%>/listausuarios">Lista Usuarios</a></li>                                                                                                                 
                                             <li><a href="<%=request.getContextPath()%>/creausuario">Crear Usuario</a></li>
                                             <li><a href="<%=request.getContextPath()%>/creapago">Crear Pago</a></li>
                                             <li><a href="<%=request.getContextPath()%>/listapago">Crear Pago</a></li>
                                             <li><a href="#">Administrar Chequeos</a></li>
-                                        </ul>
+                                        </ul>-->
                                     </nav>
                                 </div>
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
+                            <!--  
                                 <div class="header-right-btn f-right d-none d-lg-block">
                                     <a href="#" class="btn">Iniciar Sesion</a>
-                                </div>
+                                </div>-->
                             </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
@@ -117,7 +118,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap pt-100">
-                            <h2>Administrativo</h2>
+                           
                         </div>
                     </div>
                 </div>
@@ -130,16 +131,18 @@
             <div class="container">    
                 
                     <div class="col-12">
-                        <h2 class="contact-title">Creación Usuarios</h2>
+                        <h2 class="contact-title">Creación</h2>
                     </div>
                     <div class="border p-3 form">
-  						<h2>Crear </h2>
+  						
 					    <p><c:out value="${msgcrearcap}" /></p>
 						<p><c:out value="${msgcrearcon}" /></p>
 						<p><c:out value="${msgcrearusu}" /></p>
 						<p><c:out value="${msgcrearpago}" /></p>
+						<p><c:out value="${msgcrearvis}" /></p>
+						<p><c:out value="${msgecrearcheck}" /></p>
 						<br/><br/>
-						<a href='<c:out value="${pageContext.request.contextPath}" />/inicioadmi'>Ir a la pagina principal</a>
+						<a href='<c:out value="${pageContext.request.contextPath}" />/<c:out value="${redireccion}" />'>Ir a la pagina principal</a>
 
                     </div>
                 
@@ -171,8 +174,8 @@
                                  <div class="footer-tittle">
                                      <h4>Links</h4>
                                      <ul>
-                                         <li><a href="about.html">Sobre Nosotros</a></li>
-                                         <li><a href="contact.html">Contactanos</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/quiensomos">Sobre Nosotros</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/creacontacto">Contactanos</a></li>
                                      </ul>
                                  </div>
                              </div>

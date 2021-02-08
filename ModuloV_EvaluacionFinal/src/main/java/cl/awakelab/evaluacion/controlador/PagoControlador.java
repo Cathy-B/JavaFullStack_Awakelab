@@ -47,10 +47,9 @@ public class PagoControlador {
 			@RequestParam ("fechapago") String fecha,
 			@RequestParam ("monto") int monto,
 			@RequestParam ("mespago") int mes,
-			@RequestParam ("añopago") int anio,
+			@RequestParam ("anopago") int anio,
 			@RequestParam ("runcli") int runcli) {
 		
-		System.out.println(monto);
 		logger.info("Proceso la creación del pago");
 		
 		Pago pago = new Pago();
@@ -74,7 +73,9 @@ public class PagoControlador {
 			logger.error("Falló al crear el pago");
 		}
 
+		String red="inicioadmi";
 		model.addAttribute("msgcrearpago", msje);
+		model.addAttribute("redireccion", red);
 		
 		return "msgcrear";
 	}

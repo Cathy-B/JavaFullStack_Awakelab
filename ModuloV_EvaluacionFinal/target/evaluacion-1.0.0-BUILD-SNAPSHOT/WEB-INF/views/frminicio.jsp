@@ -79,29 +79,16 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">
-                                        	<li><a href="index.html">Inicio</a></li>                                                                                                                 
-                                            <li><a href="about.html">Quienes Somos</a></li>
-                                           <!---  <li><a href="index.html">Contacto</a></li>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                           <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="project_details.html">Projects Details</a></li>
-                                                    <li><a href="services_details.html">Services Details</a></li>
-                                                </ul>
-                                            </li>-->
-                                            <li><a href="contact.html">Contacto</a></li>
+                                        	<li><a href="<%=request.getContextPath()%>/">Inicio</a></li>                                                                                                                 
+                                            <li><a href="<%=request.getContextPath()%>/quiensomos">Quienes Somos</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/creacontactopublico">Contacto</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Iniciar Sesion</a>
+                                    <a href="<%=request.getContextPath()%>/acceder" class="btn">Acceder</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -183,7 +170,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/service/servicess1.png" alt="">
                             </div>
                             <div class="service-cap">
-                                <h4><a href="services_details.html">Gestión de accidentes laborales</a></h4>
+                                <h4><a href="#">Gestión de accidentes laborales</a></h4>
                             </div>
                             <div class="service-icon">
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/icon/services_icon1.png" alt="">
@@ -196,7 +183,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/service/servicess2.png" alt="">
                             </div>
                             <div class="service-cap">
-                                <h4><a href="<%=request.getContextPath()%>/creacapacitacion">Generación de capacitaciones </a></h4>
+                                <h4><a href="#" >Generación de capacitaciones </a></h4>
                             </div>
                             <div class="service-icon">
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/icon/services_icon1.png" alt="">
@@ -209,7 +196,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/service/servicess3.png" alt="">
                             </div>
                             <div class="service-cap">
-                                <h4><a href="services_details.htmlaa">Implementación de mejoras dentro de su empresa</a></h4>
+                                <h4><a href="#">Implementación de mejoras dentro de su empresa</a></h4>
                             </div>
                             <div class="service-icon">
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/icon/services_icon1.png" alt="">
@@ -229,13 +216,13 @@
                         <div class="front-text">
                             <h2 class="">Quiénes somos</h2>
                         </div>
-                        <span class="back-text">About us</span>
+                        <span class="back-text">Sobre Nosotros</span>
                     </div>
                     <div class="support-caption">
                         <p class="pera-top">Somos una empresa de asesoría en Seguridad Laboral, que cuenta con más de 10 años de experiencia en el rubro,
 											con el objetivo de entregar soluciones de calidad a cada uno de nuestros clientes.
 						</p>
-                        <a href="about.html" class="btn red-btn2">Leer más</a>
+                        <a href="<%=request.getContextPath()%>/quiensomos" class="btn red-btn2">Leer más</a>
                     </div>
                 </div>
                 <div class="right-content">
@@ -244,7 +231,7 @@
                         <img src="${pageContext.request.contextPath}/resources/assets/img/gallery/safe_in.png" alt="">
                     </div>
                     <div class="support-img-cap text-center">
-                        <span>2021</span>
+                        <span>2010</span>
                         <p>Desde</p>
                     </div>
                 </div>
@@ -272,7 +259,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/assets/img/team/team1.png" alt="">
                             </div>
                             <div class="team-caption">
-                                <span>El Weon que programa </span>
+                                <span>Algo</span>
                                 <h3>Ricardo Olguin</h3>
                             </div>
                         </div>
@@ -328,7 +315,7 @@
                              <div class="single-footer-caption mb-30">
                                  <!-- logo -->
                                  <div class="footer-logo">
-                                     <a href="index.html"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
+                                     <a href="<%=request.getContextPath()%>/"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
                                  </div>
                                  <div class="footer-tittle">
                                      <div class="footer-pera">
@@ -342,8 +329,8 @@
                                  <div class="footer-tittle">
                                      <h4>Links</h4>
                                      <ul>
-                                         <li><a href="about.html">Sobre Nosotros</a></li>
-                                         <li><a href="contact.html">Contáctanos</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/quiensomos">Sobre Nosotros</a></li>
+                                         <li><a href="<%=request.getContextPath()%>/creacontactopublico">Contactanos</a></li>
                                      </ul>
                                  </div>
                              </div>

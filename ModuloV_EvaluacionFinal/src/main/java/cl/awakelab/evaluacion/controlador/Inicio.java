@@ -26,4 +26,31 @@ public class Inicio {
 		return "frminicioadministrativo";
 	}
 	
+	@RequestMapping (value="/iniciopro",method = RequestMethod.GET)
+	public String mostrarInicioPro() {
+		
+		logger.info("Página de Inicio Profesional");
+		return "frminicioprofesional";
+	}
+	
+	@RequestMapping (value="/iniciocli",method = RequestMethod.GET)
+	public String mostrarInicioCli() {
+		
+		logger.info("Página de Inicio Cliente");
+		return "frminiciocliente";
+	}
+	
+	@RequestMapping (value="/acceder",method = RequestMethod.GET)
+	public String mostrarAcceder() {
+		
+		logger.info("Página de acceso");
+		return "frmacceder";
+	}
+	
+	@RequestMapping (value="/quiensomos",method = RequestMethod.GET)
+	public String mostrarSomos() {
+		
+		logger.info("Página de quienes somos");
+		return "frmsobrenosotros";
+	}
 }

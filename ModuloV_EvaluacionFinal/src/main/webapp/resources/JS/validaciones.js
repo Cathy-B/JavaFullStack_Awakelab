@@ -8,12 +8,6 @@ $(document).ready(function () {
 
         $("#frmcrearcap").validate({
             rules: {
-                id: {
-                    required: true,
-                    digits: true,
-                    min: 1,
-                    max: 1000
-                },
                 fecha: {
                     required: true
                 },
@@ -35,10 +29,6 @@ $(document).ready(function () {
                 }
             },
             messages: {
-                id: {
-                    required: "Debe ingresar el ID de la capacitacion",
-                    digits: "El campo debe ser numerico"
-                },
                 fecha: {
                     required: "Debe ingresar la fecha"
                 },

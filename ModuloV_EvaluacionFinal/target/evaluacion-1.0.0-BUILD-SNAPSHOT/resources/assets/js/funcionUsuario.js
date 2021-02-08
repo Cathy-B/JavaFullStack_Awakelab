@@ -12,28 +12,28 @@ function cargartipo(){
 		document.getElementById("contenido").innerHTML = 
 			" <br><div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='run' id='run' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese el run del usuario'' placeholder='ingrese el run del usuario'>"+
+                                      " <input class='form-control w-100' name='run' id='run' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese el run del cliente'' placeholder='ingrese el run del cliente'>"+
                                     "</div>"+
               "</div>"+
 			" <div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='nombres' id='nombres' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese los nombres del usuario '' placeholder='ingrese los nombres del  usuario'>"+
+                                      " <input class='form-control w-100' name='nombres' id='nombres' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese los nombres del cliente '' placeholder='ingrese los nombres del cliente'>"+
                                     "</div>"+
               "</div>"+
             " <div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='apellidos' id='apellidos' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese los apellidos del usuario'' placeholder='ingrese los apellidos del  usuario'>"+
+                                      " <input class='form-control w-100' name='apellidos' id='apellidos' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese los apellidos del cliente'' placeholder='ingrese los apellidos del cliente'>"+
                                     "</div>"+
               "</div>"+
 			" <div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='telefono' id='telefono' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese el numero telefono usuario'' placeholder='ingrese el numero telefono usuario'>"+
+                                      " <input class='form-control w-100' name='telefono' id='telefono' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese el numero telefono cliente'' placeholder='ingrese el numero telefono cliente'>"+
                                     "</div>"+
               "</div>"+
             "<div class='col-12'>"+
                                     "<div class='form-group'>"+
                                       " <select class=' form-select form-control valid ' name='afps' id='afps'>"+
-                                      	"<option selected>Seleccione la afp del usuario</option>"+
+                                      	"<option selected>Seleccione la afp del cliente</option>"+
 										"<option value='modelo'>Modelo</option><option value='provida'>Provida</option>"+
 										"<option value='habitat'>Habitat</option><option value='capital'>Capital</option>"+
 										"<option value='plan vital'>Plan vital</option></select>"+
@@ -44,7 +44,7 @@ function cargartipo(){
                "<div class='col-12'>"+
                                     "<div class='form-group'>"+
                                       " <select class=' form-select form-control valid ' name='salud' id='salud'>"+
-                                     	"<option selected>Seleccione el sistema de salud del usuario</option>"+
+                                     	"<option selected>Seleccione el sistema de salud del cliente</option>"+
                                       	"<option value='1'>Fonasa</option>"+
                                       	"<option value='2'>Isapre</option>"+
                                       	"</select>"+
@@ -54,17 +54,17 @@ function cargartipo(){
 
 			"<div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='direccion' id='direccion' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la direccion del  usuario'' placeholder='ingrese la direccion del  usuario'>"+
+                                      " <input class='form-control w-100' name='direccion' id='direccion' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la direccion del cliente'' placeholder='ingrese la direccion del cliente'>"+
                                     "</div>"+
               "</div>"+
 			"<div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='comuna' id='comuna' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la comuna del usuario'' placeholder='ingrese la comuna del usuario'>"+
+                                      " <input class='form-control w-100' name='comuna' id='comuna' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la comuna del cliente'' placeholder='ingrese la comuna del cliente'>"+
                                     "</div>"+
               "</div>"+
            "<div class='col-12'>"+
                                     "<div class='form-group'>"+
-                                      " <input class='form-control w-100' name='edad' id='edad' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la edad del usuario'' placeholder='ingrese la edad del usuario'>"+
+                                      " <input class='form-control w-100' name='edad' id='edad' onfocus='this.placeholder = ''' onblur='this.placeholder = 'ingrese la edad del cliente'' placeholder='ingrese la edad del cliente'>"+
                                     "</div>"+
               "</div>";
 

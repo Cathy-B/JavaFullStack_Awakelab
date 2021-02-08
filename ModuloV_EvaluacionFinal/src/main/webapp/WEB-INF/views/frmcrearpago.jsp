@@ -74,9 +74,9 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo.png" alt=""></a>
+                                    <a href="<%=request.getContextPath()%>/inicioadmi" class="big-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo.png" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/loder-logo.png" alt=""></a>
+                                    <a href="<%=request.getContextPath()%>/inicioadmi" class="small-logo"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/loder-logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -85,18 +85,18 @@
                                     <nav> 
                                         <ul id="navigation">
                                             <li><a href="<%=request.getContextPath()%>/inicioadmi">Inicio Administrativo</a></li>
-                                            <li><a href="<%=request.getContextPath()%>/listausuarios">Lista Usuarios</a></li>                                                                                                                 
+                                            <li><a href="<%=request.getContextPath()%>/listausuarios">Listar Usuarios</a></li>                                                                                                                 
                                             <li><a href="<%=request.getContextPath()%>/creausuario">Crear Usuario</a></li>
                                             <li><a href="<%=request.getContextPath()%>/creapago">Crear Pago</a></li>
-                                            <li><a href="<%=request.getContextPath()%>/listapago">Crear Pago</a></li>
-                                            <li><a href="#">Administrar Chequeos</a></li>
+                                            <li><a href="<%=request.getContextPath()%>/listapago">Listar Pagos</a></li>
+                                            <!--  <li><a href="#">Administrar Chequeos</a></li>-->
                                         </ul>
                                     </nav>
                                 </div>
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Iniciar Sesion</a>
+                                    <a href="<%=request.getContextPath()%>/logout" class="btn">Cerrar Sesión</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -130,10 +130,10 @@
             <div class="container">    
                 
                     <div class="col-12">
-                        <h2 class="contact-title">Creación Usuarios</h2>
+                        <h2 class="contact-title">Crear Pago</h2>
                     </div>
                     <div class="border p-3 form">
-                         <form class="form-contact contact_form" action='<c:out value="${pageContext.request.contextPath}"/>/procesapago' method="post"  >
+                         <form class="form-contact contact_form" name="frmcrearid" id="frmcrearid" action='<c:out value="${pageContext.request.contextPath}"/>/procesapago' method="post"  >
                             <div class="row">
                          
                                 <div class="col-sm-6">
@@ -146,7 +146,8 @@
                                         <input class="form-control valid" name="monto" id="monto" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el monto del pago'" placeholder="Ingrese el monto del pago" >
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                     <select class=" form-select form-control valid "  name="mespago" id="mespago" >
                                       <option selected>Seleccione el mes del pago</option>
@@ -163,12 +164,12 @@
                                       <option value="11">Noviembre</option>
                                       <option value="12">Diciembre</option>
                                     </select>                                    
-                                </div>
+                                	</div>
                                 </div>
                                 
-							 <div class="col-sm-12">
+							 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="añopago" id="añopago" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el año del pago'" placeholder="Ingrese el año del pago">
+                                        <input class="form-control valid" name="anopago" id="anopago" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el año del pago'" placeholder="Ingrese el año del pago">
                                     </div>
                              	</div>
                              	
@@ -187,7 +188,7 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Enviar</button>
+                                <button type="submit" name="btnvalidar" id="btnvalidar" class="button button-contactForm boxed-btn">Enviar</button>
                             </div>
 
                         </form>
@@ -208,7 +209,7 @@
                              <div class="single-footer-caption mb-30">
                                  <!-- logo -->
                                  <div class="footer-logo">
-                                     <a href="index.html"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
+                                     <a href="<%=request.getContextPath()%>/inicioadmi"><img src="${pageContext.request.contextPath}/resources/assets/img/logo/logo2_footer.png" alt=""></a>
                                  </div>
                                  <div class="footer-tittle">
                                      <div class="footer-pera">
@@ -289,7 +290,7 @@
         <!-- contact js -->
         <script src="${pageContext.request.contextPath}/resources/assets/js/contact.js"></script>
         <script src="${pageContext.request.contextPath}/resources/assets/js/jquery.form.js"></script>
-        <script src="${pageContext.request.contextPath}/resources/assets/js/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
         <script src="${pageContext.request.contextPath}/resources/assets/js/mail-script.js"></script>
         <script src="${pageContext.request.contextPath}/resources/assets/js/jquery.ajaxchimp.min.js"></script>
         
@@ -299,7 +300,7 @@
         
 
         <!-- Jquery crear usuario-->
-         <script src="${pageContext.request.contextPath}/resources/assets/js/funcionUsuario.js"></script>
+          <script src="${pageContext.request.contextPath}/resources/JS/validapago.js"></script>
         
     </body>
     

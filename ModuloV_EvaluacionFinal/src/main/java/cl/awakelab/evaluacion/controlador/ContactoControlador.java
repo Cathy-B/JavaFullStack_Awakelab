@@ -35,4 +35,11 @@ private static final Logger logger = LoggerFactory.getLogger(ContactoControlador
 		logger.info("Nombre: "+nombre+" Correo: "+correo+" Teléfono: "+telefono+" Mensaje: "+mensaje);
 		return "msgcrear";
 	}
+	
+	@RequestMapping (value="/creacontactopublico",method = RequestMethod.GET)
+	public String crearContactoPublico() {
+		
+		logger.info("Ingreso a la creación de contacto publico");
+		return "frmcontactopublico";
+	}
 }

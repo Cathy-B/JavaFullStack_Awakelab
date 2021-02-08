@@ -120,7 +120,9 @@ public class UsuarioControlador {
 				logger.error("Falló al crear el usuario");
 			}
 			
+			String red="inicioadmi";
 			model.addAttribute("msgcrearusu", msg);
+			model.addAttribute("redireccion", red);
 			
 		}else if(tipo == 2) {
 			
@@ -145,7 +147,9 @@ public class UsuarioControlador {
 				logger.error("Falló al crear el usuario");
 			}
 			
+			String red="inicioadmi";
 			model.addAttribute("msgcrearusu", msg);
+			model.addAttribute("redireccion", red);
 			
 		}else if(tipo == 3) {
 			
@@ -170,8 +174,10 @@ public class UsuarioControlador {
 				msg = "El usuario tipo profesional no se pudo agregar porque ocurrió un error";
 				logger.error("Falló al crear el usuario");
 			}
-			model.addAttribute("msgcrearusu", msg);
 			
+			String red="inicioadmi";
+			model.addAttribute("msgcrearusu", msg);
+			model.addAttribute("redireccion", red);
 			}
 		
 			return "msgcrear";
