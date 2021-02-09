@@ -30,11 +30,11 @@ Durante el desarrollo del sistema, se utilizaron conceptos y fundamentos pertene
 -	Java Script.
 -	Responsive.
 -	GitHub.
-- 	Controladores.
+- Controladores.
 -	Jsp.
 -	Tomcat.
 -	Base de datos(ORACLE).
--   JPA.
+- JPA.
 -	Spring Framework.
 -	Spring Security.
 
@@ -43,16 +43,30 @@ Todos los códigos presentes fueron codificados mediante el entorno de desarroll
 
 Links repositorio GitHub.
 1-	Pilar Sepulveda
-
+https://github.com/pilarpaz/Evaluacion-Final-M5
 
 2-	Catherine Natalia Box:
 https://github.com/Cathy-B/JavaFullStack_Awakelab/tree/main/ModuloV_EvaluacionFinal
 
 
 3-	Ricardo Olguin Lobos:
+https://github.com/LokoQlia/proyecto_final/tree/main/ModuloV_EvaluacionFinal
 
 
+NOTA: En caso de que las credenciales no funcionen, comente la configuración de Spring Security usando la BD, y descomente
+las configuraciones de Spring Security definidas en el provider comentado.
 
+Credenciales de Acceso
+-->Cliente
+Usuario: 17443539
+Clave: 1234
 
+-->Administrador
+Usuario: 12345678
+Clave: 1234
+
+-->Profesional
+Usuario: 87654321
+Clave: 1234
 
 
