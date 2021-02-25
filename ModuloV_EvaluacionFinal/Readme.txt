@@ -30,11 +30,11 @@ Durante el desarrollo del sistema, se utilizaron conceptos y fundamentos pertene
 -	Java Script.
 -	Responsive.
 -	GitHub.
-- 	Controladores.
+- Controladores.
 -	Jsp.
 -	Tomcat.
 -	Base de datos(ORACLE).
--   JPA.
+- JPA.
 -	Spring Framework.
 -	Spring Security.
 
@@ -69,5 +69,8 @@ Clave: 1234
 Usuario: 87654321
 Clave: 1234
 
+-->Profesional
+Usuario: 87654321
+Clave: 1234
 
 
